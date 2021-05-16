@@ -7,9 +7,9 @@ GraphNetLib is a library for making graph networks with Tensorflow 2.x.
 Graph networks operates on graphs.
 They are fed with a graph and output a graph as well.
 A graph is a structure having node (*V*), edge(*E*) and global(*u*) features.
-To learn more about graph networks, see arXiv paper: [Relational inductive biases, deep learning, and graph networks](https://arxiv.org/abs/1806.01261).
+To learn more about graph networks, see paper: [Relational inductive biases, deep learning, and graph networks](https://arxiv.org/abs/1806.01261).
 
-![Graph network](https://github.com/Rufaim/graph_net_lib/raw/master/images/graph_nets.png)
+![Graph network](https://github.com/Rufaim/graph_net_lib/raw/master/imgs/graph_nets.png)
 
 ## Installation
 
@@ -76,39 +76,39 @@ processed_graph_data = graph_network(graph_data)
 
 ### Demo
 
-The repository includes three [demo examples](https://github.com/Rufaim/graph_net_lib) of how to use the package.
+The repository includes three [demo examples](https://github.com/Rufaim/graph_net_lib/tree/master/demo) of how to use the package.
 Those demos are similar to [DeepMind's Graph Nets library](https://github.com/deepmind/graph_nets/tree/a265c907be646abc6521ddc162cb61b9b8bacfb0/graph_nets/demos)
 
-##### [Shortest path demo](https://github.com/Rufaim/graph_net_lib)
+##### [Shortest path demo](https://github.com/Rufaim/graph_net_lib/tree/master/demo/shortest_path)
 
 The "shortest path demo" shows how to train graph network to label nodes and edges on the shortest path between two nodes.
 Data are generated randomly, but it is always ensured that final graph is connected.
 
-![shortest path generated data](https://github.com/Rufaim/graph_net_lib/raw/master/images/shortest_path/data_example.png)
+![shortest path generated data](https://github.com/Rufaim/graph_net_lib/raw/master/imgs/shortest_path/data_example.png)
 
 Over a sequence of message-passing steps, the model refines its prediction of the shortest path.
 
-![shortest path prediction](https://github.com/Rufaim/graph_net_lib/raw/master/images/shortest_path/prediction.png)
+![shortest path prediction](https://github.com/Rufaim/graph_net_lib/raw/master/imgs/shortest_path/prediciton.png)
 
-##### [Physics demo](https://github.com/Rufaim/graph_net_lib)
+##### [Physics demo](https://github.com/Rufaim/graph_net_lib/tree/master/demo/physics)
 
 The "physics demo" predicts a physics of a randomly generated mass-spring systems.
 A graph network is trained to predict the evolution of the system after a fixed timestep.
 The network predicitons are fed to the network to rollout the whole dynamics of the system.
 
-![physics nine masses](https://github.com/Rufaim/graph_net_lib/raw/master/images/physics_demo/test_9.gif)
-![physics four masses](https://github.com/Rufaim/graph_net_lib/raw/master/images/physics_demo/test_4.gif)
+<img src="https://github.com/Rufaim/graph_net_lib/raw/master/imgs/physics_demo/test_9.gif" width="40%"> <img src="https://github.com/Rufaim/graph_net_lib/raw/master/imgs/physics_demo/test_4.gif" width="40%">
 
 ##### [Sorting demo](https://github.com/Rufaim/graph_net_lib)
 
 The "sort demo" graph network is trained to sort a list of random numbers.
 
-![sorting demo elements](https://github.com/Rufaim/graph_net_lib/raw/master/images/sorting_demo/elements.png)
+![sorting demo elements](https://github.com/Rufaim/graph_net_lib/raw/master/imgs/sorting_demo/elements.png)
 
 The network is trained to classify edges if a sender node (columns in the figure) is standing before a receiver node (rows) in the sorted list.
 
-![sorting demo sort true](https://github.com/Rufaim/graph_net_lib/raw/master/images/sorting_demo/graph_true.png)
-![sorting demo sort predicted](https://github.com/Rufaim/graph_net_lib/raw/master/images/sorting_demo/graph_predicted.png)
+True conntections | Predicted conntections
+--- | ---
+<img src="https://github.com/Rufaim/graph_net_lib/raw/master/imgs/sorting_demo/graphs_true.png" width="60%"> | <img src="https://github.com/Rufaim/graph_net_lib/raw/master/imgs/sorting_demo/graphs_predicted.png" width="60%">
 
 ## Copyrigth notice
 
